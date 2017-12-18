@@ -18,7 +18,8 @@ void LS_Page::loadConfig()
     ip_list.push_back("0.0.0.0");
     ip_list.push_back("255.255.255.255");
     ui_IPLocal->addItems(ip_list);
-    ui_IPTarget->addItems(ip_list);
+    if(ui_IPTarget)
+        ui_IPTarget->addItems(ip_list);
 
     QFile f(CFG_FILE);
     if(f.exists()) {
@@ -27,9 +28,9 @@ void LS_Page::loadConfig()
             ui_IPLocal->setCurrentText(settings.value(CFG_LOCAL_IP).toString());
         if(settings.value(CFG_LOCAL_PO).isValid())
             ui_PortLocal->setValue(settings.value(CFG_LOCAL_PO).toInt());
-        if(settings.value(CFG_TARGET_IP).isValid())
+        if(ui_IPTarget && settings.value(CFG_TARGET_IP).isValid())
             ui_IPTarget->setCurrentText(settings.value(CFG_TARGET_IP).toString());
-        if(settings.value(CFG_TARGET_PO).isValid())
+        if(ui_PortTarget && settings.value(CFG_TARGET_PO).isValid())
             ui_PortTarget->setValue(settings.value(CFG_TARGET_PO).toInt());
         if(settings.value(CFG_AUT_CLEAR).isValid())
             ui_cbAutClear->setChecked(settings.value(CFG_AUT_CLEAR).toBool());
@@ -50,8 +51,10 @@ void LS_Page::saveConfig()
     QSettings settings(CFG_FILE, QSettings::IniFormat);
     settings.setValue(CFG_LOCAL_IP,   QVariant(ui_IPLocal->currentText()));
     settings.setValue(CFG_LOCAL_PO,   QVariant(ui_PortLocal->value()));
-    settings.setValue(CFG_TARGET_IP,  QVariant(ui_IPTarget->currentText()));
-    settings.setValue(CFG_TARGET_PO,  QVariant(ui_PortTarget->value()));
+    if(ui_IPTarget && ui_PortTarget) {
+        settings.setValue(CFG_TARGET_IP, QVariant(ui_IPTarget->currentText()));
+        settings.setValue(CFG_TARGET_PO, QVariant(ui_PortTarget->value()));
+    }
     settings.setValue(CFG_AUT_CLEAR,  QVariant(ui_cbAutClear->isChecked()));
     settings.setValue(CFG_AUT_CLRVAL, QVariant(ui_sbAutClear->value()));
     settings.setValue(CFG_HEX,        QVariant(ui_cbHex->isChecked()));

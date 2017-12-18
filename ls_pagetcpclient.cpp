@@ -35,7 +35,6 @@ LS_PageTcpClient::~LS_PageTcpClient()
 {
     if(m_connState) {
         m_tcp->close();
-        m_tcp->deleteLater();
     }
     saveConfig();
     delete ui;
@@ -103,7 +102,7 @@ void LS_PageTcpClient::onConnectClicked()
             QMessageBox::critical(this, tr("Error"), tr("Invalid Local IP !"));
             return;
         }
-        m_tcp = new QTcpSocket();
+        m_tcp = new QTcpSocket(this);
         if(m_tcp && m_tcp->bind(local_ip, ui->PortLocal->value())) {
             quint16 port = ui->PortTarget->value();
             connect(m_tcp, SIGNAL(connected()),    this, SLOT(onConnected()));

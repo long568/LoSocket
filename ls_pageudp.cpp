@@ -35,9 +35,8 @@ LS_PageUdp::LS_PageUdp(QWidget *parent) :
 LS_PageUdp::~LS_PageUdp()
 {
     if(m_isBind) {
-        disconnect(m_udp, SIGNAL(readyRead()), this, SLOT(onReadyRead()));
         m_udp->close();
-        m_udp->deleteLater();
+        m_isBind = false;
     }
     saveConfig();
     delete ui;
@@ -91,7 +90,7 @@ void LS_PageUdp::onBindUdp()
             QMessageBox::critical(this, tr("Error"), tr("Invalid Local IP !"));
             return;
         }
-        m_udp = new QUdpSocket();
+        m_udp = new QUdpSocket(this);
         if(m_udp && m_udp->bind(ip, port)) {
             connect(m_udp, SIGNAL(readyRead()), this, SLOT(onReadyRead()));
             ui->bnBind->setText(tr("Unbind"));

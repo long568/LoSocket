@@ -116,7 +116,6 @@ LoSocket::~LoSocket()
     settings.setValue(CFG_TX_AUTSEND_MODE,  QVariant(ui->rbngTime->checkedId()));
     settings.setValue(CFG_TX_TXT_SEND,      QVariant(ui->TxData->text()));
     settings.setValue(CFG_RX_SOCKET_PAGE,   QVariant(ui->SocketPages->currentIndex()));
-    qDebug() << ui->SocketPages->currentIndex();
     delete ui;
 }
 
