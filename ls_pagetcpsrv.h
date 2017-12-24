@@ -20,8 +20,8 @@ public:
     virtual void changeLanguage(int id) override;
 
 protected:
-    virtual void loadConfig();
-    virtual void saveConfig();
+    virtual void loadConfig() override;
+    virtual void saveConfig() override;
 
 private:
     void closeServer();
