@@ -10,11 +10,13 @@
 #include <QTimer>
 #include <QKeyEvent>
 #include <QFileDialog>
+#include <QTranslator>
 
 #include "myconfig.h"
 #include "ls_pageudp.h"
 #include "ls_pagetcpclient.h"
 #include "ls_pagetcpsrv.h"
+#include "about.h"
 
 namespace Ui {
 class LoSocket;
@@ -37,6 +39,7 @@ public slots:
     void onAutSendChanged(bool isBegin);
     void onTxtSendConverted(bool isHex);
     void onFileOpened();
+    void onShowAbout();
 
 private:
     Ui::LoSocket      *ui;
@@ -45,6 +48,7 @@ private:
     LS_PageTcpClient  *m_tcpClient;
     LS_PageTcpSrv     *m_tcpSrv;
     QVector<LS_Page*>  m_pageList;
+    QTranslator       *m_Translator;
 };
 
 #endif // LOSOCKET_H

@@ -31,7 +31,8 @@ SOURCES += \
     ls_pagetcpclient.cpp \
     lotools.cpp \
     ls_pagetcpsrvitem.cpp \
-    ls_pagetcpsrv.cpp
+    ls_pagetcpsrv.cpp \
+    about.cpp
 
 HEADERS += \
         losocket.h \
@@ -41,10 +42,19 @@ HEADERS += \
     ls_pagetcpclient.h \
     lotools.h \
     ls_pagetcpsrvitem.h \
-    ls_pagetcpsrv.h
+    ls_pagetcpsrv.h \
+    about.h
 
 FORMS += \
         losocket.ui \
     ls_pageudp.ui \
     ls_pagetcpclient.ui \
-    ls_pagetcpsrv.ui
+    ls_pagetcpsrv.ui \
+    about.ui
+
+ICON = LoSocket.icns
+
+TRANSLATIONS += Languages/zhCN.ts Languages/enUS.ts
+
+RESOURCES += \
+    languages.qrc

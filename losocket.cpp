@@ -3,7 +3,8 @@
 
 LoSocket::LoSocket(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::LoSocket)
+    ui(new Ui::LoSocket),
+    m_Translator(0)
 {
 // Default Config
     ui->setupUi(this);
@@ -36,7 +37,7 @@ LoSocket::LoSocket(QWidget *parent) :
 // User Config
     QFile f(CFG_FILE);
     if(f.exists()) {
-        QSettings settings(CFG_FILE, QSettings::IniFormat);
+        QSettings settings(CFG_FILE, QSettings::NativeFormat);
         if(settings.value(CFG_WND_RECT).isValid()) {
             setGeometry(settings.value(CFG_WND_RECT).toRect());
         }
@@ -88,12 +89,14 @@ LoSocket::LoSocket(QWidget *parent) :
 
 // Preconfig
     onLanguageChanged();
+
+    connect(ui->actionAbout, SIGNAL(triggered(bool)), this, SLOT(onShowAbout()));
 }
 
 LoSocket::~LoSocket()
 {
 // Save Config
-    QSettings settings(CFG_FILE, QSettings::IniFormat);
+    QSettings settings(CFG_FILE, QSettings::NativeFormat);
     if(isMaximized()) {
         settings.setValue(CFG_WND_MAXED, QVariant(true));
     } else {
@@ -138,13 +141,26 @@ void LoSocket::keyPressEvent(QKeyEvent *event)
 void LoSocket::onLanguageChanged()
 {
     int id;
-    if(ui->actionEnglish->isChecked()) {
-        id = enUS;
-    } else {
+    QString lan;
+    if(ui->actionChinese->isChecked()) {
         id = zhCN;
+        lan = ":/zhCN";
+    } else {
+        id = enUS;
+        lan = ":/enUS";
     }
-    foreach(LS_Page *page, m_pageList)
-        page->changeLanguage(id);
+
+    if(m_Translator == 0) {
+        m_Translator = new QTranslator(this);
+        qApp->installTranslator(m_Translator);
+    }
+    if(m_Translator->load(lan)) {
+        ui->retranslateUi(this);
+        foreach(LS_Page *page, m_pageList)
+            page->changeLanguage(id);
+    } else {
+        QMessageBox::critical(this, tr("Error"), tr("Load new language failed !"));
+    }
 }
 
 void LoSocket::onAboutShown()
@@ -215,4 +231,10 @@ void LoSocket::onFileOpened()
     f_name = QFileDialog::getOpenFileName(this, tr("Select File"), path);
     if(!f_name.isEmpty())
         ui->TxData->setText(f_name);
+}
+
+void LoSocket::onShowAbout()
+{
+    About *p = new About(this);
+    p->exec();
 }

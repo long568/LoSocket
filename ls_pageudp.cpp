@@ -68,7 +68,7 @@ void LS_PageUdp::changeLanguage(int id)
     (void)id;
     ui->retranslateUi(this);
     if(m_isBind)
-        ui->bnBind->setText(tr("Disbind"));
+        ui->bnBind->setText(tr("Unbind"));
 }
 
 void LS_PageUdp::onBindUdp()

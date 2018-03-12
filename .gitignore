@@ -1,2 +1,15 @@
-
+LoSocket
+LoSocket.build
+LoSocket.xcodeproj
+Qt5AppPushToMacAppStore
+.qmake.stash
+Config.ini
+Info.plist
 *.user
+moc_*.cpp
+moc_*.h
+qrc_*.cpp
+ui_*.h
+Debug
+Release
+.DS_Store

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="en">
+<context>
+    <name>About</name>
+    <message>
+        <location filename="../about.ui" line="14"/>
+        <source>About</source>
+        <translation type="unfinished">About</translation>
+    </message>
+    <message>
+        <location filename="../about.ui" line="50"/>
+        <source>Thanks for using</source>
+        <translation type="unfinished">Thanks for using</translation>
+    </message>
+    <message>
+        <location filename="../about.ui" line="81"/>
+        <source>https://github.com/long568
+http://blog.csdn.net/llong568</source>
+        <translation type="unfinished">https://github.com/long568
+http://blog.csdn.net/llong568</translation>
+    </message>
+    <message>
+        <location filename="../about.ui" line="110"/>
+        <source>Close</source>
+        <translation type="unfinished">OK</translation>
+    </message>
+</context>
+<context>
+    <name>LS_PageTcpClient</name>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="41"/>
+        <source>Local Host</source>
+        <translation type="unfinished">Local Host</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="96"/>
+        <location filename="../ls_pagetcpclient.cpp" line="85"/>
+        <source>Connect</source>
+        <translation type="unfinished">Connect</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="107"/>
+        <source>Target Host</source>
+        <translation type="unfinished">Target Host</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="162"/>
+        <source>Clear</source>
+        <translation type="unfinished">Clear</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="202"/>
+        <source>Aut Clear /</source>
+        <translation type="unfinished">Aut Clear /</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="219"/>
+        <source>min</source>
+        <translation type="unfinished">min</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="242"/>
+        <source>Hex</source>
+        <translation type="unfinished">Hex</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="249"/>
+        <source>Save to File</source>
+        <translation type="unfinished">Save to File</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.ui" line="265"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.SF NS Text&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;SimSun&apos;; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="49"/>
+        <location filename="../ls_pagetcpclient.cpp" line="97"/>
+        <location filename="../ls_pagetcpclient.cpp" line="102"/>
+        <location filename="../ls_pagetcpclient.cpp" line="122"/>
+        <location filename="../ls_pagetcpclient.cpp" line="158"/>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="49"/>
+        <location filename="../ls_pagetcpclient.cpp" line="97"/>
+        <source>Invalid Target IP !</source>
+        <translation type="unfinished">Invalid Target IP !</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="52"/>
+        <source>TX</source>
+        <translation type="unfinished">TX</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="69"/>
+        <location filename="../ls_pagetcpclient.cpp" line="117"/>
+        <source>Disconnect</source>
+        <translation type="unfinished">Disconnect</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="86"/>
+        <location filename="../ls_pagetcpclient.cpp" line="119"/>
+        <location filename="../ls_pagetcpclient.cpp" line="158"/>
+        <source>[Local]</source>
+        <translation type="unfinished">[Local]</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="86"/>
+        <source>Disconnected</source>
+        <translation type="unfinished">Disconnected</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="102"/>
+        <source>Invalid Local IP !</source>
+        <translation type="unfinished">Invalid Local IP !</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="119"/>
+        <source>Connecting ...</source>
+        <translation type="unfinished">Connecting ...</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="122"/>
+        <source>Bind Local IP Failed !</source>
+        <translation type="unfinished">Bind Local IP Failed !</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="131"/>
+        <source>Connected</source>
+        <translation type="unfinished">Connected</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpclient.cpp" line="137"/>
+        <source>RX</source>
+        <translation type="unfinished">RX</translation>
+    </message>
+</context>
+<context>
+    <name>LS_PageTcpSrv</name>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="59"/>
+        <source>Local Host</source>
+        <translation type="unfinished">Local Host</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="119"/>
+        <location filename="../ls_pagetcpsrv.cpp" line="116"/>
+        <source>Create</source>
+        <translation type="unfinished">Create</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="142"/>
+        <source>Target Host</source>
+        <translation type="unfinished">Target Host</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="202"/>
+        <location filename="../ls_pagetcpsrv.cpp" line="105"/>
+        <location filename="../ls_pagetcpsrv.cpp" line="146"/>
+        <source>Close</source>
+        <translation type="unfinished">Close</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="242"/>
+        <source>Rx-All</source>
+        <translation type="unfinished">Rx-All</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="255"/>
+        <source>Aut Clear /</source>
+        <translation type="unfinished">Aut Clear /</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="272"/>
+        <source>min</source>
+        <translation type="unfinished">min</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="295"/>
+        <source>Tx-All</source>
+        <translation type="unfinished">Tx-All</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="302"/>
+        <source>Hex</source>
+        <translation type="unfinished">Hex</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="309"/>
+        <source>Save to File</source>
+        <translation type="unfinished">Save to File</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="340"/>
+        <source>List of Clients</source>
+        <translation type="unfinished">List of Clients</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="360"/>
+        <location filename="../ls_pagetcpsrv.ui" line="411"/>
+        <source>Clear</source>
+        <translation type="unfinished">Clear</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="391"/>
+        <source>Message</source>
+        <translation type="unfinished">Message</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.ui" line="423"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.SF NS Text&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;SimSun&apos;; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="61"/>
+        <location filename="../ls_pagetcpsrv.cpp" line="68"/>
+        <source>TX</source>
+        <translation type="unfinished">TX</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="113"/>
+        <location filename="../ls_pagetcpsrv.cpp" line="143"/>
+        <location filename="../ls_pagetcpsrv.cpp" line="162"/>
+        <location filename="../ls_pagetcpsrv.cpp" line="180"/>
+        <source>[Local]</source>
+        <translation type="unfinished">[Local]</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="113"/>
+        <source>TCP Server Closed</source>
+        <translation type="unfinished">TCP Server Closed</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="132"/>
+        <location filename="../ls_pagetcpsrv.cpp" line="138"/>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="132"/>
+        <source>Invalid Local IP !</source>
+        <translation type="unfinished">Invalid Local IP !</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="138"/>
+        <source>TCP Server Listen Failed !</source>
+        <translation type="unfinished">TCP Server Listen Failed !</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="143"/>
+        <source>Listening ...</source>
+        <translation type="unfinished">Listening ...</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="162"/>
+        <source>All Clients Closed</source>
+        <translation type="unfinished">All Clients Closed</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="180"/>
+        <source>Client Accept Error</source>
+        <translation type="unfinished">Client Accept Error</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="194"/>
+        <source>Connected</source>
+        <translation type="unfinished">Connected</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="202"/>
+        <source>RX</source>
+        <translation type="unfinished">RX</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="215"/>
+        <source>Disconnected</source>
+        <translation type="unfinished">Disconnected</translation>
+    </message>
+    <message>
+        <location filename="../ls_pagetcpsrv.cpp" line="222"/>
+        <source>Error/Disconnected</source>
+        <translation type="unfinished">Error/Disconnected</translation>
+    </message>
+</context>
+<context>
+    <name>LS_PageUdp</name>
+    <message>
+        <location filename="../ls_pageudp.ui" line="14"/>
+        <source>Form</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.ui" line="41"/>
+        <source>Local Host</source>
+        <translation type="unfinished">Local Host</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.ui" line="96"/>
+        <location filename="../ls_pageudp.cpp" line="80"/>
+        <source>Bind</source>
+        <translation type="unfinished">Bind</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.ui" line="107"/>
+        <source>Target Host</source>
+        <translation type="unfinished">Target Host</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.ui" line="168"/>
+        <source>Clear</source>
+        <translation type="unfinished">Clear</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.ui" line="208"/>
+        <source>Aut Clear /</source>
+        <translation type="unfinished">Aut Clear /</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.ui" line="231"/>
+        <source>min</source>
+        <translation type="unfinished">min</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.ui" line="254"/>
+        <source>Hex</source>
+        <translation type="unfinished">Hex</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.ui" line="261"/>
+        <source>Save to File</source>
+        <translation type="unfinished">Save to File</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.ui" line="277"/>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;.SF NS Text&apos;; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;SimSun&apos;; font-size:9pt;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.cpp" line="51"/>
+        <location filename="../ls_pageudp.cpp" line="90"/>
+        <location filename="../ls_pageudp.cpp" line="103"/>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.cpp" line="51"/>
+        <source>Invalid Target IP !</source>
+        <translation type="unfinished">Invalid Target IP !</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.cpp" line="54"/>
+        <source>TX</source>
+        <translation type="unfinished">TX</translation>
+    </message>
+    <message>
+        <source>Disbind</source>
+        <translation type="obsolete">Disbind</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.cpp" line="90"/>
+        <source>Invalid Local IP !</source>
+        <translation type="unfinished">Invalid Local IP !</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.cpp" line="71"/>
+        <location filename="../ls_pageudp.cpp" line="96"/>
+        <source>Unbind</source>
+        <translation type="unfinished">Unbind</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.cpp" line="103"/>
+        <source>Socket Bound Failed !</source>
+        <translation type="unfinished">Socket Bound Failed !</translation>
+    </message>
+    <message>
+        <location filename="../ls_pageudp.cpp" line="118"/>
+        <source>RX</source>
+        <translation type="unfinished">RX</translation>
+    </message>
+</context>
+<context>
+    <name>LoSocket</name>
+    <message>
+        <location filename="../losocket.ui" line="14"/>
+        <source>LoSocket</source>
+        <translation type="unfinished">LoSocket</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="70"/>
+        <source>Attach</source>
+        <translation type="unfinished">Attach</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="76"/>
+        <source>CR</source>
+        <translation type="unfinished">CR</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="83"/>
+        <source>LF</source>
+        <translation type="unfinished">LF</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="90"/>
+        <source>ZERO</source>
+        <translation type="unfinished">ZERO</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="100"/>
+        <source>Type</source>
+        <translation type="unfinished">Type</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="106"/>
+        <source>Text</source>
+        <translation type="unfinished">Text</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="119"/>
+        <source>Hex</source>
+        <translation type="unfinished">Hex</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="129"/>
+        <location filename="../losocket.ui" line="345"/>
+        <source>File</source>
+        <translation type="unfinished">File</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="142"/>
+        <location filename="../losocket.ui" line="316"/>
+        <source>Send</source>
+        <translation type="unfinished">Send</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="150"/>
+        <source>Send to All Page</source>
+        <translation type="unfinished">Send to All Page</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="174"/>
+        <source>Enter to Send &amp;&amp;</source>
+        <translation type="unfinished">Enter to Send &amp;&amp;</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="181"/>
+        <source>Aut Clear</source>
+        <translation type="unfinished">Aut Clear</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="205"/>
+        <source>Aut Send /</source>
+        <translation type="unfinished">Aut Send /</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="225"/>
+        <source>ms</source>
+        <translation type="unfinished">ms</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="238"/>
+        <source>s</source>
+        <translation type="unfinished">s</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="248"/>
+        <source>min</source>
+        <translation type="unfinished">min</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="329"/>
+        <source>Clear</source>
+        <translation type="unfinished">Clear</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="370"/>
+        <source>Language</source>
+        <translation type="unfinished">Language</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="377"/>
+        <source>Help</source>
+        <translation type="unfinished">Help</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="407"/>
+        <source>Chinese</source>
+        <translation type="unfinished">中文</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="415"/>
+        <source>English</source>
+        <translation type="unfinished">English</translation>
+    </message>
+    <message>
+        <location filename="../losocket.ui" line="420"/>
+        <source>About</source>
+        <translation type="unfinished">About</translation>
+    </message>
+    <message>
+        <location filename="../losocket.cpp" line="162"/>
+        <source>Error</source>
+        <translation type="unfinished">Error</translation>
+    </message>
+    <message>
+        <location filename="../losocket.cpp" line="162"/>
+        <source>Load new language failed !</source>
+        <translation type="unfinished">Load new language failed !</translation>
+    </message>
+    <message>
+        <location filename="../losocket.cpp" line="231"/>
+        <source>Select File</source>
+        <translation type="unfinished">Select File</translation>
+    </message>
+</context>
+</TS>
