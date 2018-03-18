@@ -13,3 +13,8 @@ ui_*.h
 Debug
 Release
 .DS_Store
+xcshareddata
+project.xcworkspace
+project.pbxproj
+qt_makeqmake.mak
+qt_preprocess.mak
