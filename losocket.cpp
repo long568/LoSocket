@@ -37,7 +37,7 @@ LoSocket::LoSocket(QWidget *parent) :
 // User Config
     QFile f(CFG_FILE);
     if(f.exists()) {
-        QSettings settings(CFG_FILE, QSettings::NativeFormat);
+        QSettings settings(CFG_FILE, CONF_FORMAT);
         if(settings.value(CFG_WND_RECT).isValid()) {
             setGeometry(settings.value(CFG_WND_RECT).toRect());
         }
@@ -96,7 +96,7 @@ LoSocket::LoSocket(QWidget *parent) :
 LoSocket::~LoSocket()
 {
 // Save Config
-    QSettings settings(CFG_FILE, QSettings::NativeFormat);
+    QSettings settings(CFG_FILE, CONF_FORMAT);
     if(isMaximized()) {
         settings.setValue(CFG_WND_MAXED, QVariant(true));
     } else {

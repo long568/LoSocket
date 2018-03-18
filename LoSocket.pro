@@ -52,7 +52,8 @@ FORMS += \
     ls_pagetcpsrv.ui \
     about.ui
 
-ICON = LoSocket.icns
+win32:RC_ICONS = LoSocket.ico
+osx:ICON = LoSocket.icns
 
 TRANSLATIONS += Languages/zhCN.ts Languages/enUS.ts
 
