@@ -5,7 +5,6 @@
 #include <QMessageBox>
 #include "lotools.h"
 
-#define CFG_FILE              "LoSocket.cfg"
 #define CFG_WND_MAXED         "Window/Maxed"
 #define CFG_WND_RECT          "Window/Rect"
 #define CFG_WND_LAN           "Window/Language"

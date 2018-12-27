@@ -18,12 +18,6 @@
 #include "ls_pagetcpsrv.h"
 #include "about.h"
 
-#if defined(Q_OS_WIN32)
-#   define CONF_FORMAT QSettings::IniFormat
-#elif defined(Q_OS_MACOS)
-#   define CONF_FORMAT QSettings::NativeFormat
-#endif
-
 namespace Ui {
 class LoSocket;
 }

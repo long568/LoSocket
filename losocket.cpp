@@ -35,57 +35,54 @@ LoSocket::LoSocket(QWidget *parent) :
     m_pageList.push_back(m_tcpSrv);
 
 // User Config
-    QFile f(CFG_FILE);
-    if(f.exists()) {
-        QSettings settings(CFG_FILE, CONF_FORMAT);
-        if(settings.value(CFG_WND_RECT).isValid()) {
-            setGeometry(settings.value(CFG_WND_RECT).toRect());
-        }
-        if(settings.value(CFG_WND_MAXED).isValid() &&
-           settings.value(CFG_WND_MAXED).toBool()) {
-            setWindowState(Qt::WindowMaximized);
-        }
-        if(settings.value(CFG_WND_LAN).isValid()) {
-            switch(settings.value(CFG_WND_LAN).toInt()) {
-            case enUS: ui->actionEnglish->setChecked(true); break;
-            default:   ui->actionChinese->setChecked(true); break;
-            }
-        }
-        if(settings.value(CFG_TX_ATTACH_CR).isValid())
-            ui->cbAttachCR->setChecked(settings.value(CFG_TX_ATTACH_CR).toBool());
-        if(settings.value(CFG_TX_ATTACH_LF).isValid())
-            ui->cbAttachLF->setChecked(settings.value(CFG_TX_ATTACH_LF).toBool());
-        if(settings.value(CFG_TX_ATTACH_ZR).isValid())
-            ui->cbAttachZR->setChecked(settings.value(CFG_TX_ATTACH_ZR).toBool());
-        if(settings.value(CFG_TX_MODE).isValid()) {
-            switch (settings.value(CFG_TX_MODE).toInt()) {
-            case 0: ui->rbnText->setChecked(true); break;
-            case 1: ui->rbnHex->setChecked(true);  break;
-            case 2: ui->rbnFile->setChecked(true); break;
-            default: break;
-            }
-        }
-        if(settings.value(CFG_TX_SEND2ALL).isValid())
-            ui->cbSend2All->setChecked(settings.value(CFG_TX_SEND2ALL).toBool());
-        if(settings.value(CFG_TX_ENTER).isValid())
-            ui->cbEnter->setChecked(settings.value(CFG_TX_ENTER).toBool());
-        if(settings.value(CFG_TX_AUTCLEAR).isValid())
-            ui->cbAutClear->setChecked(settings.value(CFG_TX_AUTCLEAR).toBool());
-        if(settings.value(CFG_TX_AUTSEND_VALUE).isValid())
-            ui->sbAutSend->setValue(settings.value(CFG_TX_AUTSEND_VALUE).toInt());
-        if(settings.value(CFG_TX_AUTSEND_MODE).isValid()) {
-            switch (settings.value(CFG_TX_AUTSEND_MODE).toInt()) {
-            case 0: ui->rbnMS->setChecked(true);  break;
-            case 1: ui->rbnS->setChecked(true);   break;
-            case 2: ui->rbnMin->setChecked(true); break;
-            default: break;
-            }
-        }
-        if(settings.value(CFG_TX_TXT_SEND).isValid())
-            ui->TxData->setText(settings.value(CFG_TX_TXT_SEND).toString());
-        if(settings.value(CFG_RX_SOCKET_PAGE).isValid())
-            ui->SocketPages->setCurrentIndex(settings.value(CFG_RX_SOCKET_PAGE).toInt());
+    QSettings settings("long", "LoSocket");
+    if(settings.value(CFG_WND_RECT).isValid()) {
+        setGeometry(settings.value(CFG_WND_RECT).toRect());
     }
+    if(settings.value(CFG_WND_MAXED).isValid() &&
+       settings.value(CFG_WND_MAXED).toBool()) {
+        setWindowState(Qt::WindowMaximized);
+    }
+    if(settings.value(CFG_WND_LAN).isValid()) {
+        switch(settings.value(CFG_WND_LAN).toInt()) {
+        case enUS: ui->actionEnglish->setChecked(true); break;
+        default:   ui->actionChinese->setChecked(true); break;
+        }
+    }
+    if(settings.value(CFG_TX_ATTACH_CR).isValid())
+        ui->cbAttachCR->setChecked(settings.value(CFG_TX_ATTACH_CR).toBool());
+    if(settings.value(CFG_TX_ATTACH_LF).isValid())
+        ui->cbAttachLF->setChecked(settings.value(CFG_TX_ATTACH_LF).toBool());
+    if(settings.value(CFG_TX_ATTACH_ZR).isValid())
+        ui->cbAttachZR->setChecked(settings.value(CFG_TX_ATTACH_ZR).toBool());
+    if(settings.value(CFG_TX_MODE).isValid()) {
+        switch (settings.value(CFG_TX_MODE).toInt()) {
+        case 0: ui->rbnText->setChecked(true); break;
+        case 1: ui->rbnHex->setChecked(true);  break;
+        case 2: ui->rbnFile->setChecked(true); break;
+        default: break;
+        }
+    }
+    if(settings.value(CFG_TX_SEND2ALL).isValid())
+        ui->cbSend2All->setChecked(settings.value(CFG_TX_SEND2ALL).toBool());
+    if(settings.value(CFG_TX_ENTER).isValid())
+        ui->cbEnter->setChecked(settings.value(CFG_TX_ENTER).toBool());
+    if(settings.value(CFG_TX_AUTCLEAR).isValid())
+        ui->cbAutClear->setChecked(settings.value(CFG_TX_AUTCLEAR).toBool());
+    if(settings.value(CFG_TX_AUTSEND_VALUE).isValid())
+        ui->sbAutSend->setValue(settings.value(CFG_TX_AUTSEND_VALUE).toInt());
+    if(settings.value(CFG_TX_AUTSEND_MODE).isValid()) {
+        switch (settings.value(CFG_TX_AUTSEND_MODE).toInt()) {
+        case 0: ui->rbnMS->setChecked(true);  break;
+        case 1: ui->rbnS->setChecked(true);   break;
+        case 2: ui->rbnMin->setChecked(true); break;
+        default: break;
+        }
+    }
+    if(settings.value(CFG_TX_TXT_SEND).isValid())
+        ui->TxData->setText(settings.value(CFG_TX_TXT_SEND).toString());
+    if(settings.value(CFG_RX_SOCKET_PAGE).isValid())
+        ui->SocketPages->setCurrentIndex(settings.value(CFG_RX_SOCKET_PAGE).toInt());
 
 // Preconfig
     onLanguageChanged();
@@ -96,7 +93,7 @@ LoSocket::LoSocket(QWidget *parent) :
 LoSocket::~LoSocket()
 {
 // Save Config
-    QSettings settings(CFG_FILE, CONF_FORMAT);
+    QSettings settings("long", "LoSocket");
     if(isMaximized()) {
         settings.setValue(CFG_WND_MAXED, QVariant(true));
     } else {

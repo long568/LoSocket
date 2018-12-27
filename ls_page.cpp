@@ -21,26 +21,23 @@ void LS_Page::loadConfig()
     if(ui_IPTarget)
         ui_IPTarget->addItems(ip_list);
 
-    QFile f(CFG_FILE);
-    if(f.exists()) {
-        QSettings settings(CFG_FILE, QSettings::IniFormat);
-        if(settings.value(CFG_LOCAL_IP).isValid())
-            ui_IPLocal->setCurrentText(settings.value(CFG_LOCAL_IP).toString());
-        if(settings.value(CFG_LOCAL_PO).isValid())
-            ui_PortLocal->setValue(settings.value(CFG_LOCAL_PO).toInt());
-        if(ui_IPTarget && settings.value(CFG_TARGET_IP).isValid())
-            ui_IPTarget->setCurrentText(settings.value(CFG_TARGET_IP).toString());
-        if(ui_PortTarget && settings.value(CFG_TARGET_PO).isValid())
-            ui_PortTarget->setValue(settings.value(CFG_TARGET_PO).toInt());
-        if(settings.value(CFG_AUT_CLEAR).isValid())
-            ui_cbAutClear->setChecked(settings.value(CFG_AUT_CLEAR).toBool());
-        if(settings.value(CFG_AUT_CLRVAL).isValid())
-            ui_sbAutClear->setValue(settings.value(CFG_AUT_CLRVAL).toInt());
-        if(settings.value(CFG_HEX).isValid())
-            ui_cbHex->setChecked(settings.value(CFG_HEX).toBool());
-        if(settings.value(CFG_SAVE_LOG).isValid())
-            ui_cbSaveLog->setChecked(settings.value(CFG_SAVE_LOG).toBool());
-    }
+    QSettings settings("long", "LoSocket");
+    if(settings.value(CFG_LOCAL_IP).isValid())
+        ui_IPLocal->setCurrentText(settings.value(CFG_LOCAL_IP).toString());
+    if(settings.value(CFG_LOCAL_PO).isValid())
+        ui_PortLocal->setValue(settings.value(CFG_LOCAL_PO).toInt());
+    if(ui_IPTarget && settings.value(CFG_TARGET_IP).isValid())
+        ui_IPTarget->setCurrentText(settings.value(CFG_TARGET_IP).toString());
+    if(ui_PortTarget && settings.value(CFG_TARGET_PO).isValid())
+        ui_PortTarget->setValue(settings.value(CFG_TARGET_PO).toInt());
+    if(settings.value(CFG_AUT_CLEAR).isValid())
+        ui_cbAutClear->setChecked(settings.value(CFG_AUT_CLEAR).toBool());
+    if(settings.value(CFG_AUT_CLRVAL).isValid())
+        ui_sbAutClear->setValue(settings.value(CFG_AUT_CLRVAL).toInt());
+    if(settings.value(CFG_HEX).isValid())
+        ui_cbHex->setChecked(settings.value(CFG_HEX).toBool());
+    if(settings.value(CFG_SAVE_LOG).isValid())
+        ui_cbSaveLog->setChecked(settings.value(CFG_SAVE_LOG).toBool());
 
     onSaveChanged(ui_cbSaveLog->isChecked());
     onAutClearChanged(ui_cbAutClear->isChecked());
@@ -48,7 +45,7 @@ void LS_Page::loadConfig()
 
 void LS_Page::saveConfig()
 {
-    QSettings settings(CFG_FILE, QSettings::IniFormat);
+    QSettings settings("long", "LoSocket");
     settings.setValue(CFG_LOCAL_IP,   QVariant(ui_IPLocal->currentText()));
     settings.setValue(CFG_LOCAL_PO,   QVariant(ui_PortLocal->value()));
     if(ui_IPTarget && ui_PortTarget) {

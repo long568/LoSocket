@@ -76,22 +76,19 @@ void LS_PageTcpSrv::sendData(QByteArray a)
 void LS_PageTcpSrv::loadConfig()
 {
     LS_Page::loadConfig();
-    QFile f(CFG_FILE);
-    if(f.exists()) {
-        QSettings settings(CFG_FILE, QSettings::IniFormat);
-        if(settings.value(CFG_TCPSRV_RX_ALL).isValid())
-            ui->cbRxAll->setChecked(settings.value(CFG_TCPSRV_RX_ALL).toBool());
-        if(settings.value(CFG_TCPSRV_TX_ALL).isValid())
-            ui->cbTxAll->setChecked(settings.value(CFG_TCPSRV_TX_ALL).toBool());
-        if(settings.value(CFG_TCPSRV_MSGLAY).isValid())
-            ui->MsgLayout->restoreState(settings.value(CFG_TCPSRV_MSGLAY).toByteArray());
-    }
+    QSettings settings("long", "LoSocket");
+    if(settings.value(CFG_TCPSRV_RX_ALL).isValid())
+        ui->cbRxAll->setChecked(settings.value(CFG_TCPSRV_RX_ALL).toBool());
+    if(settings.value(CFG_TCPSRV_TX_ALL).isValid())
+        ui->cbTxAll->setChecked(settings.value(CFG_TCPSRV_TX_ALL).toBool());
+    if(settings.value(CFG_TCPSRV_MSGLAY).isValid())
+        ui->MsgLayout->restoreState(settings.value(CFG_TCPSRV_MSGLAY).toByteArray());
 }
 
 void LS_PageTcpSrv::saveConfig()
 {
     LS_Page::saveConfig();
-    QSettings settings(CFG_FILE, QSettings::IniFormat);
+    QSettings settings("long", "LoSocket");
     settings.setValue(CFG_TCPSRV_RX_ALL, QVariant(ui->cbRxAll->isChecked()));
     settings.setValue(CFG_TCPSRV_TX_ALL, QVariant(ui->cbTxAll->isChecked()));
     settings.setValue(CFG_TCPSRV_MSGLAY, QVariant(ui->MsgLayout->saveState()));
